@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Gym Memberships — LX Arena</title>
+<meta name="description" content="Monthly, quarterly, and annual gym membership plans at LX Arena." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">LX <span>Arena</span></a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="booking.html">Booking</a>
+      <a href="night-matches.html">Night Matches</a>
+      <a href="find-opponent.html">Find Opponent</a>
+      <a href="gym.html">Gym</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-ctas">
+      <a href="memberships.html" class="btn btn-outline btn-sm">Join Gym</a>
+      <a href="booking.html" class="btn btn-primary btn-sm">Book Now</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-drawer" id="mobileDrawer">
+  <a href="index.html">Home</a><a href="booking.html">Booking</a><a href="night-matches.html">Night Matches</a><a href="find-opponent.html">Find Opponent</a><a href="gym.html">Gym</a><a href="memberships.html">Memberships</a><a href="pricing.html">Pricing</a><a href="gallery.html">Gallery</a><a href="offers.html">Offers</a><a href="about.html">About</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a>
+</div>
+
+<main>
+  <section class="page-header">
+    <p class="eyebrow center">Membership</p>
+    <h1>Join the gym</h1>
+    <p>Pick a plan below — pay at the facility, no card details needed online.</p>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <div class="pricing-grid" id="plansGrid"></div>
+  </section>
+
+  <section class="section section-alt" id="signupSection">
+    <p class="eyebrow center">Almost there</p>
+    <h2 class="section-title center">Complete your membership</h2>
+
+    <form id="membershipForm" class="form" novalidate>
+      <div id="membershipError" class="form-error" style="display:none;"></div>
+
+      <label>Selected plan
+        <select id="msPlan"></select>
+      </label>
+      <div class="form-row">
+        <label>Full name
+          <input type="text" id="msName" placeholder="Your name">
+          <span class="err" id="err-msName"></span>
+        </label>
+        <label>Phone
+          <input type="tel" id="msPhone" placeholder="98XXXXXXXX">
+          <span class="err" id="err-msPhone"></span>
+        </label>
+      </div>
+      <label>Email
+        <input type="email" id="msEmail" placeholder="you@example.com">
+        <span class="err" id="err-msEmail"></span>
+      </label>
+      <label>Start date
+        <input type="date" id="msStart">
+        <span class="err" id="err-msStart"></span>
+      </label>
+
+      <button type="submit" class="btn btn-primary btn-block" id="msSubmit">Request this plan</button>
+      <p class="form-footnote">Payment is completed at the facility — no card details are collected online.</p>
+    </form>
+
+    <div id="membershipConfirm" class="confirm" style="display:none;">
+      <div class="confirm-check">✓</div>
+      <h3>Membership request received.</h3>
+      <p class="confirm-sub">Visit the facility to complete payment and activate your membership.</p>
+      <div class="confirm-details" id="membershipConfirmDetails"></div>
+      <button class="link-btn" id="msAgain">Choose a different plan</button>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div><p class="footer-logo">LX <span>Arena</span></p><p data-cfg="description"></p></div>
+    <div><p class="footer-head">Explore</p><a href="index.html">Home</a><a href="booking.html">Booking</a><a href="night-matches.html">Night Matches</a><a href="find-opponent.html">Find Opponent</a><a href="gym.html">Gym</a><a href="memberships.html">Memberships</a></div>
+    <div><p class="footer-head">More</p><a href="pricing.html">Pricing</a><a href="gallery.html">Gallery</a><a href="offers.html">Offers</a><a href="about.html">About</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></div>
+    <div><p class="footer-head">Contact</p><p data-cfg="address"></p><p data-cfg="phone"></p><p data-cfg="email"></p><p data-cfg="hoursDisplay"></p></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 LX Arena. All rights reserved.</span><div><span>Privacy policy</span> <span>Terms</span></div></div>
+</footer>
+
+<div class="bottom-bar">
+  <a href="index.html"><span class="bb-icon">🏠</span>Home</a>
+  <a href="booking.html"><span class="bb-icon">🥅</span>Book</a>
+  <a href="night-matches.html"><span class="bb-icon">🌙</span>Matches</a>
+  <a href="gym.html"><span class="bb-icon">🏋️</span>Gym</a>
+  <a href="contact.html"><span class="bb-icon">☰</span>More</a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="config.js"></script>
+<script src="main.js"></script>
+<script src="memberships.js"></script>
+</body>
+</html>

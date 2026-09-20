@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact — LX Arena</title>
+<meta name="description" content="Contact LX Arena — location, phone, email, and directions." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">LX <span>Arena</span></a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="booking.html">Booking</a>
+      <a href="night-matches.html">Night Matches</a>
+      <a href="find-opponent.html">Find Opponent</a>
+      <a href="gym.html">Gym</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+    <div class="nav-ctas">
+      <a href="memberships.html" class="btn btn-outline btn-sm">Join Gym</a>
+      <a href="booking.html" class="btn btn-primary btn-sm">Book Now</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-drawer" id="mobileDrawer">
+  <a href="index.html">Home</a><a href="booking.html">Booking</a><a href="night-matches.html">Night Matches</a><a href="find-opponent.html">Find Opponent</a><a href="gym.html">Gym</a><a href="memberships.html">Memberships</a><a href="pricing.html">Pricing</a><a href="gallery.html">Gallery</a><a href="offers.html">Offers</a><a href="about.html">About</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a>
+</div>
+
+<main>
+  <section class="page-header">
+    <p class="eyebrow center">Get in touch</p>
+    <h1>Contact & location</h1>
+    <p>Questions, group bookings, or anything else — reach out directly.</p>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <div class="contact-grid">
+      <div>
+        <p class="eyebrow">Visit us</p>
+        <h2 data-cfg="name"></h2>
+        <div class="loc-line">📍 <span data-cfg="address"></span></div>
+        <div class="loc-line">🕐 <span data-cfg="hoursDisplay"></span></div>
+        <div class="loc-line">📞 <span data-cfg="phone"></span></div>
+        <div class="loc-line">✉️ <span data-cfg="email"></span></div>
+        <div class="hero-buttons" style="justify-content:flex-start;margin-top:1.5rem;">
+          <a href="#" data-cfg-directions class="btn btn-primary">Get directions</a>
+          <a href="#" data-cfg-tel class="btn btn-outline">Call now</a>
+        </div>
+      </div>
+      <div class="map-wrap">
+        <iframe data-cfg-map title="LX Arena location" loading="lazy" src=""></iframe>
+      </div>
+    </div>
+
+    <div style="max-width:34rem;margin:0 auto;">
+      <h2 style="font-family:var(--display);font-size:1.3rem;text-align:center;margin-bottom:1.8rem;">Send a message</h2>
+      <form id="contactForm" class="form" novalidate>
+        <div id="contactError" class="form-error" style="display:none;"></div>
+        <div class="form-row">
+          <label>Name
+            <input type="text" id="cName" placeholder="Your name">
+            <span class="err" id="err-cName"></span>
+          </label>
+          <label>Phone
+            <input type="tel" id="cPhone" placeholder="98XXXXXXXX">
+          </label>
+        </div>
+        <label>Email
+          <input type="email" id="cEmail" placeholder="you@example.com">
+          <span class="err" id="err-cEmail"></span>
+        </label>
+        <label>Subject
+          <input type="text" id="cSubject" placeholder="What's this about?">
+        </label>
+        <label>Message
+          <textarea id="cMessage" rows="4" placeholder="Your message"></textarea>
+          <span class="err" id="err-cMessage"></span>
+        </label>
+        <button type="submit" class="btn btn-primary btn-block" id="cSubmit">Send message</button>
+      </form>
+      <div id="contactConfirm" class="confirm-inline" style="display:none;">✓ Message sent. We'll get back to you shortly.</div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div><p class="footer-logo">LX <span>Arena</span></p><p data-cfg="description"></p></div>
+    <div><p class="footer-head">Explore</p><a href="index.html">Home</a><a href="booking.html">Booking</a><a href="night-matches.html">Night Matches</a><a href="find-opponent.html">Find Opponent</a><a href="gym.html">Gym</a><a href="memberships.html">Memberships</a></div>
+    <div><p class="footer-head">More</p><a href="pricing.html">Pricing</a><a href="gallery.html">Gallery</a><a href="offers.html">Offers</a><a href="about.html">About</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></div>
+    <div><p class="footer-head">Contact</p><p data-cfg="address"></p><p data-cfg="phone"></p><p data-cfg="email"></p><p data-cfg="hoursDisplay"></p></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 LX Arena. All rights reserved.</span><div><span>Privacy policy</span> <span>Terms</span></div></div>
+</footer>
+
+<div class="bottom-bar">
+  <a href="index.html"><span class="bb-icon">🏠</span>Home</a>
+  <a href="booking.html"><span class="bb-icon">🥅</span>Book</a>
+  <a href="night-matches.html"><span class="bb-icon">🌙</span>Matches</a>
+  <a href="gym.html"><span class="bb-icon">🏋️</span>Gym</a>
+  <a href="contact.html" class="active"><span class="bb-icon">☰</span>More</a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="config.js"></script>
+<script src="main.js"></script>
+<script src="contact.js"></script>
+</body>
+</html>

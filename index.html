@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>LX Arena — Futsal Courts, Night Matches & Gym in Kathmandu</title>
+<meta name="description" content="Book futsal courts, join night matches, find an opponent, or get a gym membership at LX Arena, Sinamangal, Kathmandu." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">LX <span>Arena</span></a>
+    <nav class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="booking.html">Booking</a>
+      <a href="night-matches.html">Night Matches</a>
+      <a href="find-opponent.html">Find Opponent</a>
+      <a href="gym.html">Gym</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-ctas">
+      <a href="memberships.html" class="btn btn-outline btn-sm">Join Gym</a>
+      <a href="booking.html" class="btn btn-primary btn-sm">Book Now</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-drawer" id="mobileDrawer">
+  <a href="index.html">Home</a>
+  <a href="booking.html">Booking</a>
+  <a href="night-matches.html">Night Matches</a>
+  <a href="find-opponent.html">Find Opponent</a>
+  <a href="gym.html">Gym</a>
+  <a href="memberships.html">Memberships</a>
+  <a href="pricing.html">Pricing</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="offers.html">Offers</a>
+  <a href="about.html">About</a>
+  <a href="faq.html">FAQ</a>
+  <a href="contact.html">Contact</a>
+  <a href="booking.html" class="btn btn-primary" style="margin-top:1.5rem;text-align:center;">Book Now</a>
+</div>
+
+<main>
+
+  <section class="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-content">
+      <p class="eyebrow">Sinamangal, Kathmandu</p>
+      <h1>Play. Train. Compete.</h1>
+      <p class="hero-desc" data-cfg="description"></p>
+      <div class="hero-buttons">
+        <a href="booking.html" class="btn btn-primary">Book a court</a>
+        <a href="memberships.html" class="btn btn-outline">Join the gym</a>
+        <a href="find-opponent.html" class="btn btn-outline">Find an opponent</a>
+      </div>
+      <div class="hero-status">
+        <span><strong>Open today</strong></span>
+        <span data-cfg="hoursDisplay"></span>
+        <span data-cfg="address"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK BOOKING WIDGET -->
+  <div class="booking-widget">
+    <form id="quickBookingForm" class="booking-widget-grid">
+      <div>
+        <label>Date</label>
+        <input type="date" id="qbDate">
+      </div>
+      <div>
+        <label>Court</label>
+        <select id="qbCourt"></select>
+      </div>
+      <div>
+        <label>Time</label>
+        <select id="qbTime"></select>
+      </div>
+      <div>
+        <label>Players</label>
+        <input type="number" id="qbPlayers" min="1" max="14" value="10">
+      </div>
+      <button type="submit" class="btn btn-primary">Check availability</button>
+    </form>
+  </div>
+
+  <!-- SERVICES -->
+  <section class="section">
+    <h2 class="section-title center">Everything you need to play</h2>
+    <div class="service-grid">
+      <div class="service-card">
+        <div class="icon">⚽</div>
+        <h3>Futsal Courts</h3>
+        <p>Two full-sized indoor turf courts, available by the hour, day or night.</p>
+        <a href="booking.html" class="btn btn-outline btn-block">Book a court</a>
+      </div>
+      <div class="service-card">
+        <div class="icon">🌙</div>
+        <h3>Night Matches</h3>
+        <p>Join an organized match under the floodlights — solo players welcome.</p>
+        <a href="night-matches.html" class="btn btn-outline btn-block">Join night match</a>
+      </div>
+      <div class="service-card">
+        <div class="icon">🏋️</div>
+        <h3>Gym</h3>
+        <p>Full gym access with monthly, quarterly, or annual membership plans.</p>
+        <a href="gym.html" class="btn btn-outline btn-block">View gym</a>
+      </div>
+      <div class="service-card">
+        <div class="icon">🤝</div>
+        <h3>Find Opponents</h3>
+        <p>No one to play against? Post your team and get matched with another.</p>
+        <a href="find-opponent.html" class="btn btn-outline btn-block">Find opponent</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="section section-alt">
+    <h2 class="section-title center">Why players come back</h2>
+    <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
+      <div class="card"><h3 style="font-family:var(--display);font-size:1.05rem;margin:0 0 0.6rem;">Real turf, indoors</h3><p style="color:var(--muted);font-size:0.9rem;margin:0;">Consistent footing regardless of weather, all year round.</p></div>
+      <div class="card"><h3 style="font-family:var(--display);font-size:1.05rem;margin:0 0 0.6rem;">Floodlit at night</h3><p style="color:var(--muted);font-size:0.9rem;margin:0;">Full lighting so the 9pm slot plays as sharp as the 9am one.</p></div>
+      <div class="card"><h3 style="font-family:var(--display);font-size:1.05rem;margin:0 0 0.6rem;">Gym + court, one place</h3><p style="color:var(--muted);font-size:0.9rem;margin:0;">Train and play without switching venues.</p></div>
+      <div class="card"><h3 style="font-family:var(--display);font-size:1.05rem;margin:0 0 0.6rem;">Never short a player</h3><p style="color:var(--muted);font-size:0.9rem;margin:0;">Find Opponent and night matches mean you're never stuck for a game.</p></div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="section" id="reviewsSection">
+    <h2 class="section-title center">What players say</h2>
+    <div id="reviewsWrap"></div>
+  </section>
+
+  <section class="cta-band">
+    <h2>Ready to play?</h2>
+    <p>Book a court, join a night match, or sign up for the gym — all in a couple of taps.</p>
+    <div class="hero-buttons" style="justify-content:center;">
+      <a href="booking.html" class="btn btn-accent">Book a court</a>
+      <a href="contact.html" class="btn btn-outline">Contact us</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <p class="footer-logo">LX <span>Arena</span></p>
+      <p data-cfg="description"></p>
+    </div>
+    <div>
+      <p class="footer-head">Explore</p>
+      <a href="index.html">Home</a><a href="booking.html">Booking</a><a href="night-matches.html">Night Matches</a><a href="find-opponent.html">Find Opponent</a><a href="gym.html">Gym</a><a href="memberships.html">Memberships</a>
+    </div>
+    <div>
+      <p class="footer-head">More</p>
+      <a href="pricing.html">Pricing</a><a href="gallery.html">Gallery</a><a href="offers.html">Offers</a><a href="about.html">About</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a>
+      <a href="admin.html">Admin Login</a>
+    </div>
+    <div>
+      <p class="footer-head">Contact</p>
+      <p data-cfg="address"></p>
+      <p data-cfg="phone"></p>
+      <p data-cfg="email"></p>
+      <p data-cfg="hoursDisplay"></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 LX Arena. All rights reserved.</span>
+    <div><span>Privacy policy</span> <span>Terms</span></div>
+  </div>
+</footer>
+
+<div class="bottom-bar">
+  <a href="index.html" class="active"><span class="bb-icon">🏠</span>Home</a>
+  <a href="booking.html" class="highlight"><span class="bb-icon">🥅</span>Book</a>
+  <a href="night-matches.html"><span class="bb-icon">🌙</span>Matches</a>
+  <a href="gym.html"><span class="bb-icon">🏋️</span>Gym</a>
+  <a href="contact.html"><span class="bb-icon">☰</span>More</a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="config.js"></script>
+<script src="main.js"></script>
+<script src="home.js"></script>
+</body>
+</html>

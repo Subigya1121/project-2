@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Night Matches — LX Arena</title>
+<meta name="description" content="Join an organized night futsal match at LX Arena — solo players welcome." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">LX <span>Arena</span></a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="booking.html">Booking</a>
+      <a href="night-matches.html" class="active">Night Matches</a>
+      <a href="find-opponent.html">Find Opponent</a>
+      <a href="gym.html">Gym</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-ctas">
+      <a href="memberships.html" class="btn btn-outline btn-sm">Join Gym</a>
+      <a href="booking.html" class="btn btn-primary btn-sm">Book Now</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-drawer" id="mobileDrawer">
+  <a href="index.html">Home</a><a href="booking.html">Booking</a><a href="night-matches.html">Night Matches</a><a href="find-opponent.html">Find Opponent</a><a href="gym.html">Gym</a><a href="memberships.html">Memberships</a><a href="pricing.html">Pricing</a><a href="gallery.html">Gallery</a><a href="offers.html">Offers</a><a href="about.html">About</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a>
+</div>
+
+<main>
+  <section class="page-header">
+    <p class="eyebrow center">Under the lights</p>
+    <h1>Night matches</h1>
+    <p>Organized matches with real floodlighting — join solo and get placed into a team, or bring your own squad.</p>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <div class="card-grid" id="matchGrid"></div>
+  </section>
+
+  <section class="section section-alt">
+    <h2 class="section-title center">How it works</h2>
+    <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+      <div class="card"><h3 style="font-family:var(--display);font-size:1.05rem;margin:0 0 0.6rem;">1. Pick a match</h3><p style="color:var(--muted);font-size:0.9rem;margin:0;">Choose a night and skill level that fits.</p></div>
+      <div class="card"><h3 style="font-family:var(--display);font-size:1.05rem;margin:0 0 0.6rem;">2. Reserve your spot</h3><p style="color:var(--muted);font-size:0.9rem;margin:0;">Confirm below — solo players are placed into a team on the night.</p></div>
+      <div class="card"><h3 style="font-family:var(--display);font-size:1.05rem;margin:0 0 0.6rem;">3. Show up & play</h3><p style="color:var(--muted);font-size:0.9rem;margin:0;">Arrive 10 minutes early, balls and bibs are provided.</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="joinSection">
+    <p class="eyebrow center">Reserve your spot</p>
+    <h2 class="section-title center">Join a match</h2>
+
+    <form id="joinForm" class="form" novalidate>
+      <div id="joinError" class="form-error" style="display:none;"></div>
+      <label>Which match?
+        <select id="jmMatch"></select>
+      </label>
+      <div class="form-row">
+        <label>Full name
+          <input type="text" id="jmName" placeholder="Your name">
+          <span class="err" id="err-jmName"></span>
+        </label>
+        <label>Phone
+          <input type="tel" id="jmPhone" placeholder="98XXXXXXXX">
+          <span class="err" id="err-jmPhone"></span>
+        </label>
+      </div>
+      <label>Joining as
+        <select id="jmMode">
+          <option value="solo">Solo player (place me on a team)</option>
+          <option value="team">Bringing my own team</option>
+        </select>
+      </label>
+      <button type="submit" class="btn btn-primary btn-block" id="jmSubmit">Reserve my spot</button>
+    </form>
+
+    <div id="joinConfirm" class="confirm" style="display:none;">
+      <div class="confirm-check">✓</div>
+      <h3>You're in.</h3>
+      <div class="confirm-details" id="joinConfirmDetails"></div>
+      <button class="link-btn" id="jmAgain">Join another match</button>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div><p class="footer-logo">LX <span>Arena</span></p><p data-cfg="description"></p></div>
+    <div><p class="footer-head">Explore</p><a href="index.html">Home</a><a href="booking.html">Booking</a><a href="night-matches.html">Night Matches</a><a href="find-opponent.html">Find Opponent</a><a href="gym.html">Gym</a><a href="memberships.html">Memberships</a></div>
+    <div><p class="footer-head">More</p><a href="pricing.html">Pricing</a><a href="gallery.html">Gallery</a><a href="offers.html">Offers</a><a href="about.html">About</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></div>
+    <div><p class="footer-head">Contact</p><p data-cfg="address"></p><p data-cfg="phone"></p><p data-cfg="email"></p><p data-cfg="hoursDisplay"></p></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 LX Arena. All rights reserved.</span><div><span>Privacy policy</span> <span>Terms</span></div></div>
+</footer>
+
+<div class="bottom-bar">
+  <a href="index.html"><span class="bb-icon">🏠</span>Home</a>
+  <a href="booking.html"><span class="bb-icon">🥅</span>Book</a>
+  <a href="night-matches.html" class="active"><span class="bb-icon">🌙</span>Matches</a>
+  <a href="gym.html"><span class="bb-icon">🏋️</span>Gym</a>
+  <a href="contact.html"><span class="bb-icon">☰</span>More</a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="config.js"></script>
+<script src="main.js"></script>
+<script src="lx-arena-site/lx-arena-site/night-matches.js"></script>
+</body>
+</html>

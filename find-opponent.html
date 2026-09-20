@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Find an Opponent — LX Arena</title>
+<meta name="description" content="Post your team's availability or browse teams looking for a match at LX Arena." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">LX <span>Arena</span></a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="booking.html">Booking</a>
+      <a href="night-matches.html">Night Matches</a>
+      <a href="find-opponent.html" class="active">Find Opponent</a>
+      <a href="gym.html">Gym</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-ctas">
+      <a href="memberships.html" class="btn btn-outline btn-sm">Join Gym</a>
+      <a href="booking.html" class="btn btn-primary btn-sm">Book Now</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-drawer" id="mobileDrawer">
+  <a href="index.html">Home</a><a href="booking.html">Booking</a><a href="night-matches.html">Night Matches</a><a href="find-opponent.html">Find Opponent</a><a href="gym.html">Gym</a><a href="memberships.html">Memberships</a><a href="pricing.html">Pricing</a><a href="gallery.html">Gallery</a><a href="offers.html">Offers</a><a href="about.html">About</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a>
+</div>
+
+<main>
+  <section class="page-header">
+    <p class="eyebrow center">Never short a game</p>
+    <h1>Find an opponent</h1>
+    <p>Post your team's availability, or browse teams already looking for a match.</p>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <h2 class="section-title center">Teams looking for a match</h2>
+    <div class="card-grid" id="opponentGrid"></div>
+    <p style="text-align:center;color:var(--muted);font-size:0.78rem;margin-top:1.5rem;">
+      Contact details are kept private — use "Request Match" and the team will be notified directly.
+    </p>
+  </section>
+
+  <section class="section section-alt" id="postSection">
+    <p class="eyebrow center">Looking for a game?</p>
+    <h2 class="section-title center">Post your team</h2>
+
+    <form id="opponentForm" class="form" novalidate>
+      <div id="opponentError" class="form-error" style="display:none;"></div>
+
+      <label>Team name
+        <input type="text" id="opTeamName" placeholder="Your team's name">
+        <span class="err" id="err-opTeamName"></span>
+      </label>
+      <div class="form-row">
+        <label>Captain name
+          <input type="text" id="opCaptainName" placeholder="Captain's full name">
+          <span class="err" id="err-opCaptainName"></span>
+        </label>
+        <label>Phone (kept private)
+          <input type="tel" id="opPhone" placeholder="98XXXXXXXX">
+          <span class="err" id="err-opPhone"></span>
+        </label>
+      </div>
+      <div class="form-row">
+        <label>Preferred date
+          <input type="date" id="opDate">
+          <span class="err" id="err-opDate"></span>
+        </label>
+        <label>Preferred time
+          <select id="opTime"></select>
+        </label>
+      </div>
+      <div class="form-row">
+        <label>Skill level
+          <select id="opSkill">
+            <option>Beginner</option>
+            <option>Intermediate</option>
+            <option>Advanced</option>
+          </select>
+        </label>
+        <label>Number of players
+          <input type="number" id="opPlayers" min="5" max="14" value="7">
+        </label>
+      </div>
+      <label>Message (optional)
+        <textarea id="opMessage" rows="2" placeholder="Anything else teams should know"></textarea>
+      </label>
+
+      <button type="submit" class="btn btn-primary btn-block" id="opSubmit">Post my team</button>
+    </form>
+
+    <div id="opponentConfirm" class="confirm" style="display:none;">
+      <div class="confirm-check">✓</div>
+      <h3>Your team is posted.</h3>
+      <p class="confirm-sub">Other teams can now see your listing and request a match.</p>
+      <button class="link-btn" id="opAgain">Post another listing</button>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div><p class="footer-logo">LX <span>Arena</span></p><p data-cfg="description"></p></div>
+    <div><p class="footer-head">Explore</p><a href="index.html">Home</a><a href="booking.html">Booking</a><a href="night-matches.html">Night Matches</a><a href="find-opponent.html">Find Opponent</a><a href="gym.html">Gym</a><a href="memberships.html">Memberships</a></div>
+    <div><p class="footer-head">More</p><a href="pricing.html">Pricing</a><a href="gallery.html">Gallery</a><a href="offers.html">Offers</a><a href="about.html">About</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></div>
+    <div><p class="footer-head">Contact</p><p data-cfg="address"></p><p data-cfg="phone"></p><p data-cfg="email"></p><p data-cfg="hoursDisplay"></p></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 LX Arena. All rights reserved.</span><div><span>Privacy policy</span> <span>Terms</span></div></div>
+</footer>
+
+<div class="bottom-bar">
+  <a href="index.html"><span class="bb-icon">🏠</span>Home</a>
+  <a href="booking.html"><span class="bb-icon">🥅</span>Book</a>
+  <a href="night-matches.html"><span class="bb-icon">🌙</span>Matches</a>
+  <a href="gym.html"><span class="bb-icon">🏋️</span>Gym</a>
+  <a href="contact.html"><span class="bb-icon">☰</span>More</a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="config.js"></script>
+<script src="main.js"></script>
+<script src="lx-arena-site/lx-arena-site/find-opponent.js"></script>
+</body>
+</html>

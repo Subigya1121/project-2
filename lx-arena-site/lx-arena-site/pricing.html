@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pricing — LX Arena</title>
+<meta name="description" content="Futsal court, night match, and gym membership pricing at LX Arena." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">LX <span>Arena</span></a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="booking.html">Booking</a>
+      <a href="night-matches.html">Night Matches</a>
+      <a href="find-opponent.html">Find Opponent</a>
+      <a href="gym.html">Gym</a>
+      <a href="pricing.html" class="active">Pricing</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-ctas">
+      <a href="memberships.html" class="btn btn-outline btn-sm">Join Gym</a>
+      <a href="booking.html" class="btn btn-primary btn-sm">Book Now</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-drawer" id="mobileDrawer">
+  <a href="index.html">Home</a><a href="booking.html">Booking</a><a href="night-matches.html">Night Matches</a><a href="find-opponent.html">Find Opponent</a><a href="gym.html">Gym</a><a href="memberships.html">Memberships</a><a href="pricing.html">Pricing</a><a href="gallery.html">Gallery</a><a href="offers.html">Offers</a><a href="about.html">About</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a>
+</div>
+
+<main>
+  <section class="page-header">
+    <p class="eyebrow center">No surprises</p>
+    <h1>Pricing</h1>
+    <p>Every service, one place. All prices in Nepali Rupees.</p>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <h2 class="section-title">Futsal courts</h2>
+    <div class="pricing-table-wrap">
+      <table class="pricing-table">
+        <thead><tr><th>Court</th><th>Type</th><th>Price</th></tr></thead>
+        <tbody id="courtPricingBody"></tbody>
+      </table>
+    </div>
+
+    <h2 class="section-title">Night matches</h2>
+    <div class="pricing-table-wrap">
+      <table class="pricing-table">
+        <thead><tr><th>Match</th><th>Day / Time</th><th>Price per player</th></tr></thead>
+        <tbody id="matchPricingBody"></tbody>
+      </table>
+    </div>
+
+    <h2 class="section-title">Gym membership</h2>
+    <div class="pricing-table-wrap">
+      <table class="pricing-table">
+        <thead><tr><th>Plan</th><th>Duration</th><th>Price</th></tr></thead>
+        <tbody id="planPricingBody"></tbody>
+      </table>
+    </div>
+
+    <p style="text-align:center;">
+      <a href="booking.html" class="btn btn-primary" style="margin-right:1rem;">Book a court</a>
+      <a href="memberships.html" class="btn btn-outline">Join the gym</a>
+    </p>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div><p class="footer-logo">LX <span>Arena</span></p><p data-cfg="description"></p></div>
+    <div><p class="footer-head">Explore</p><a href="index.html">Home</a><a href="booking.html">Booking</a><a href="night-matches.html">Night Matches</a><a href="find-opponent.html">Find Opponent</a><a href="gym.html">Gym</a><a href="memberships.html">Memberships</a></div>
+    <div><p class="footer-head">More</p><a href="pricing.html">Pricing</a><a href="gallery.html">Gallery</a><a href="offers.html">Offers</a><a href="about.html">About</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></div>
+    <div><p class="footer-head">Contact</p><p data-cfg="address"></p><p data-cfg="phone"></p><p data-cfg="email"></p><p data-cfg="hoursDisplay"></p></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 LX Arena. All rights reserved.</span><div><span>Privacy policy</span> <span>Terms</span></div></div>
+</footer>
+
+<div class="bottom-bar">
+  <a href="index.html"><span class="bb-icon">🏠</span>Home</a>
+  <a href="booking.html"><span class="bb-icon">🥅</span>Book</a>
+  <a href="night-matches.html"><span class="bb-icon">🌙</span>Matches</a>
+  <a href="gym.html"><span class="bb-icon">🏋️</span>Gym</a>
+  <a href="contact.html"><span class="bb-icon">☰</span>More</a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="config.js"></script>
+<script src="main.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('courtPricingBody').innerHTML = COURTS.map((c) =>
+      `<tr><td>${c.name}</td><td>${c.type}</td><td>Rs ${c.pricePerHour}/hr</td></tr>`
+    ).join('');
+
+    document.getElementById('matchPricingBody').innerHTML = NIGHT_MATCHES.length
+      ? NIGHT_MATCHES.map((m) => `<tr><td>${m.title}</td><td>${m.day}, ${m.time}</td><td>Rs ${m.pricePerPlayer}</td></tr>`).join('')
+      : `<tr><td colspan="3" style="color:var(--muted);text-align:center;">No night matches scheduled right now.</td></tr>`;
+
+    document.getElementById('planPricingBody').innerHTML = MEMBERSHIP_PLANS.map((p) =>
+      `<tr><td>${p.name}</td><td>${p.duration}</td><td>Rs ${p.price.toLocaleString()}</td></tr>`
+    ).join('');
+  });
+</script>
+</body>
+</html>

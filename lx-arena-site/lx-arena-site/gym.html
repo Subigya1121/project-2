@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Gym — LX Arena</title>
+<meta name="description" content="Full gym access at LX Arena — equipment, training area, and membership plans." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">LX <span>Arena</span></a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="booking.html">Booking</a>
+      <a href="night-matches.html">Night Matches</a>
+      <a href="find-opponent.html">Find Opponent</a>
+      <a href="gym.html" class="active">Gym</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-ctas">
+      <a href="memberships.html" class="btn btn-outline btn-sm">Join Gym</a>
+      <a href="booking.html" class="btn btn-primary btn-sm">Book Now</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-drawer" id="mobileDrawer">
+  <a href="index.html">Home</a><a href="booking.html">Booking</a><a href="night-matches.html">Night Matches</a><a href="find-opponent.html">Find Opponent</a><a href="gym.html">Gym</a><a href="memberships.html">Memberships</a><a href="pricing.html">Pricing</a><a href="gallery.html">Gallery</a><a href="offers.html">Offers</a><a href="about.html">About</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a>
+</div>
+
+<main>
+  <section class="page-header">
+    <p class="eyebrow center">Train harder</p>
+    <h1>The gym</h1>
+    <p>Free weights, cardio, and strength equipment — open to members, with day passes for walk-ins.</p>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <h2 class="section-title center">What's in the gym</h2>
+    <ul class="facility-list" id="facilityList"></ul>
+  </section>
+
+  <section class="section section-alt">
+    <h2 class="section-title center">Membership benefits</h2>
+    <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+      <div class="card"><h3 style="font-family:var(--display);font-size:1.05rem;margin:0 0 0.6rem;">Unlimited access</h3><p style="color:var(--muted);font-size:0.9rem;margin:0;">Train as often as you like within opening hours.</p></div>
+      <div class="card"><h3 style="font-family:var(--display);font-size:1.05rem;margin:0 0 0.6rem;">Locker included</h3><p style="color:var(--muted);font-size:0.9rem;margin:0;">Secure storage every visit, no extra charge.</p></div>
+      <div class="card"><h3 style="font-family:var(--display);font-size:1.05rem;margin:0 0 0.6rem;">Court hours bundled</h3><p style="color:var(--muted);font-size:0.9rem;margin:0;">Every plan includes futsal court time each week.</p></div>
+      <div class="card"><h3 style="font-family:var(--display);font-size:1.05rem;margin:0 0 0.6rem;">One facility</h3><p style="color:var(--muted);font-size:0.9rem;margin:0;">Train and play without switching venues.</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="gymHours">
+    <div class="contact-grid" style="margin-bottom:0;">
+      <div>
+        <p class="eyebrow">Hours</p>
+        <h2>Opening hours</h2>
+        <p class="loc-line" data-cfg="hoursDisplay"></p>
+      </div>
+      <div>
+        <p class="eyebrow">Ready to join?</p>
+        <h2>Pick a plan</h2>
+        <a href="memberships.html" class="btn btn-primary">View memberships</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div><p class="footer-logo">LX <span>Arena</span></p><p data-cfg="description"></p></div>
+    <div><p class="footer-head">Explore</p><a href="index.html">Home</a><a href="booking.html">Booking</a><a href="night-matches.html">Night Matches</a><a href="find-opponent.html">Find Opponent</a><a href="gym.html">Gym</a><a href="memberships.html">Memberships</a></div>
+    <div><p class="footer-head">More</p><a href="pricing.html">Pricing</a><a href="gallery.html">Gallery</a><a href="offers.html">Offers</a><a href="about.html">About</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></div>
+    <div><p class="footer-head">Contact</p><p data-cfg="address"></p><p data-cfg="phone"></p><p data-cfg="email"></p><p data-cfg="hoursDisplay"></p></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 LX Arena. All rights reserved.</span><div><span>Privacy policy</span> <span>Terms</span></div></div>
+</footer>
+
+<div class="bottom-bar">
+  <a href="index.html"><span class="bb-icon">🏠</span>Home</a>
+  <a href="booking.html"><span class="bb-icon">🥅</span>Book</a>
+  <a href="night-matches.html"><span class="bb-icon">🌙</span>Matches</a>
+  <a href="gym.html" class="active"><span class="bb-icon">🏋️</span>Gym</a>
+  <a href="contact.html"><span class="bb-icon">☰</span>More</a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="config.js"></script>
+<script src="main.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('facilityList').innerHTML = GYM_FACILITIES.map((f) => `<li>${f}</li>`).join('');
+  });
+</script>
+</body>
+</html>
